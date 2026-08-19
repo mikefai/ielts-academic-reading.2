@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Academic Reading | Band 5 → 6 Vocabulary Booster</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --primary-dark: #1e293b;
+            --accent: #d97706;
+            --accent-light: #fef3c7;
+            --success: #059669;
+            --success-light: #d1fae5;
+            --danger: #dc2626;
+            --danger-light: #fee2e2;
+            --warning: #ca8a04;
+            --warning-light: #fef9c3;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 8px;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        [data-theme="dark"] {
+            --bg-main: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --accent-light: #451a03;
+            --success-light: #064e3b;
+            --danger-light: #7f1d1d;
+            --warning-light: #713f12;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.25rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .header-title h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .header-title p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-light);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2563eb;
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--border);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--border);
+        }
+
+        .btn-sm {
+            padding: 0.25rem 0.6rem;
+            font-size: 0.775rem;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            height: fit-content;
+            position: sticky;
+            top: 4.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .nav-item a {
+            display: block;
+            padding: 0.55rem 0.75rem;
+            border-radius: var(--radius);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.15s ease;
+        }
+
+        .nav-item a:hover {
+            background-color: var(--border);
+            color: var(--text-main);
+        }
+
+        .nav-item a.active {
+            background-color: var(--primary-light);
+            color: white;
+            font-weight: 600;
+        }
+
+        .nav-section-title {
+            font-size: 0.725rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin: 0.8rem 0.75rem 0.3rem;
+            font-weight: 700;
+        }
+
+        /* Main Content Panels */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .module-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .module-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .module-tag {
+            background-color: var(--accent-light);
+            color: var(--accent);
+            padding: 0.2rem 0.65rem;
+            border-radius: 9999px;
+            font-size: 0.725rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .module-title {
+            font-size: 1.35rem;
+            color: var(--primary);
+            margin-top: 0.25rem;
+        }
+
+        /* Callouts */
+        .callout {
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius);
+            margin: 1rem 0;
+            border-left: 4px solid var(--primary-light);
+            background-color: rgba(59, 130, 246, 0.08);
+            font-size: 0.925rem;
+        }
+
+        .callout-success {
+            border-left-color: var(--success);
+            background-color: var(--success-light);
+            color: #064e3b;
+        }
+
+        .callout-warning {
+            border-left-color: var(--warning);
+            background-color: var(--warning-light);
+            color: #713f12;
+        }
+
+        /* Exercise Cards & Forms */
+        .exercise-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+            background-color: var(--bg-card);
+        }
+
+        .exercise-question {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        select.vocab-select, input.vocab-input {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 0.875rem;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .feedback-box {
+            display: none;
+            padding: 0.8rem 1rem;
+            border-radius: var(--radius);
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+        }
+
+        /* Words Bank Badge Grid */
+        .words-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        .word-card {
+            background-color: var(--bg-main);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.8rem;
+            font-size: 0.85rem;
+        }
+
+        .word-card strong {
+            color: var(--primary);
+            display: block;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Banner -->
+    <header>
+        <div class="header-title">
+            <h1>IELTS Academic Reading | Band 5 → 6 Vocabulary Booster</h1>
+            <p>Workplace Automation & Academic Paraphrase Mastery</p>
+        </div>
+        <div class="header-actions">
+            <a href="index.html" class="btn btn-secondary btn-sm">⬅️ Back to T/F/NG Strategy Workshop</a>
+            <button class="btn btn-secondary btn-sm" onclick="toggleTheme()">🌓 Dark/Light</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="nav-section-title">Exercises</div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#bank" class="active">Target Vocab Bank</a></li>
+                <li class="nav-item"><a href="#ex1">Ex 1: Definitions</a></li>
+                <li class="nav-item"><a href="#ex2">Ex 2: Collocations</a></li>
+                <li class="nav-item"><a href="#ex3">Ex 3: Paraphrase Decoder</a></li>
+                <li class="nav-item"><a href="#ex4">Ex 4: Sentence Cloze</a></li>
+                <li class="nav-item"><a href="#ex5">Ex 5: Quantifier Scope</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+
+            <!-- VOCAB BANK -->
+            <section id="bank" class="module-card">
+                <div class="module-header">
+                    <div>
+                        <span class="module-tag">Reference Bank</span>
+                        <h2 class="module-title">Target Academic Word List (Passages 1 & 2)</h2>
+                    </div>
+                </div>
+                <p>Mastering these 15 key academic terms from the workshop passages will significantly boost your paraphrase recognition in Band 6 Reading items.</p>
+                
+                <div class="words-grid">
+                    <div class="word-card">
+                        <strong>Operational autonomy</strong>
+                        <span style="color:var(--text-muted);">Freedom of workers to control their tasks.</span>
+                    </div>
+                    <div class="word-card">
+                        <strong>Proprietary algorithm</strong>
+                        <span style="color:var(--text-muted);">Privately owned, non-public computer code.</span>
+                    </div>
+                    <div class="word-card">
+                        <strong>Task restructuring</strong>
+                        <span style="color:var(--text-muted);">Altering job duties without firing staff.</span>
+                    </div>
+                    <div class="word-card">
+                        <strong>Biometric telemetry</strong>
+                        <span style="color:var(--text-muted);">Automated biological/physical data tracking.</span>
+                    </div>
+                    <div class="word-card">
+                        <strong>Exception-handling</strong>
+                        <span style="color:var(--text-muted);">Humans stepping in when software limits fail.</span>
+                    </div>
+                    <div class="word-card">
+                        <strong>Qualitative feedback</strong>
+                        <span style="color:var(--text-muted);">Descriptive, text-based opinion data.</span>
+                    </div>
+                    <div class="word-card">
+                        <strong>Prohibitive costs</strong>
+                        <span style="color:var(--text-muted);">Expenses too high to afford.</span>
+                    </div>
+                    <div class="word-card">
+                        <strong>Skill mismatch</strong>
+                        <span style="color:var(--text-muted);">Gap between worker skills & job needs.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXERCISE 1 -->
+            <section id="ex1" class="module-card">
+                <div class="module-header">
+                    <div>
+                        <span class="module-tag">Exercise 01</span>
+                        <h2 class="module-title">Contextual Definition Matching</h2>
+                    </div>
+                </div>
+                <p>Match each target academic term to its precise definition.</p>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">1. System design where human supervisors intervene only when automated parameters fail:</div>
+                    <select class="vocab-select" id="ex1-q1">
+                        <option value="">-- Select Term --</option>
+                        <option value="Proprietary algorithm">Proprietary algorithm</option>
+                        <option value="Exception-handling principle">Exception-handling principle</option>
+                        <option value="Operational autonomy">Operational autonomy</option>
+                    </select>
+                    <div class="feedback-box" id="ex1-fb-1"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">2. Privately owned software models whose decision rules are obscure to non-technical staff:</div>
+                    <select class="vocab-select" id="ex1-q2">
+                        <option value="">-- Select Term --</option>
+                        <option value="Proprietary algorithm">Proprietary algorithm</option>
+                        <option value="Task restructuring">Task restructuring</option>
+                        <option value="Biometric telemetry">Biometric telemetry</option>
+                    </select>
+                    <div class="feedback-box" id="ex1-fb-2"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">3. Reorganizing worker duties into supervisory roles rather than eliminating positions completely:</div>
+                    <select class="vocab-select" id="ex1-q3">
+                        <option value="">-- Select Term --</option>
+                        <option value="Skill mismatch">Skill mismatch</option>
+                        <option value="Task restructuring">Task restructuring</option>
+                        <option value="Operational autonomy">Operational autonomy</option>
+                    </select>
+                    <div class="feedback-box" id="ex1-fb-3"></div>
+                </div>
+
+                <button class="btn btn-primary" onclick="gradeEx1()">Check Exercise 1 Answers</button>
+            </section>
+
+            <!-- EXERCISE 2 -->
+            <section id="ex2" class="module-card">
+                <div class="module-header">
+                    <div>
+                        <span class="module-tag">Exercise 02</span>
+                        <h2 class="module-title">Academic Collocation Builder</h2>
+                    </div>
+                </div>
+                <p>Select the correct word to complete the formal academic collocation from the reading passages.</p>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">1. Employees feel deprived of operational __________ when algorithms control daily schedules.</div>
+                    <select class="vocab-select" id="ex2-q1">
+                        <option value="">-- Choose Word --</option>
+                        <option value="autonomy">autonomy</option>
+                        <option value="telemetry">telemetry</option>
+                        <option value="mismatch">mismatch</option>
+                    </select>
+                    <div class="feedback-box" id="ex2-fb-1"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">2. Automated natural language tools enable systems to analyze qualitative __________ from clients.</div>
+                    <select class="vocab-select" id="ex2-q2">
+                        <option value="">-- Choose Word --</option>
+                        <option value="feedback">feedback</option>
+                        <option value="friction">friction</option>
+                        <option value="overhead">overhead</option>
+                    </select>
+                    <div class="feedback-box" id="ex2-fb-2"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">3. Continuous biometric tracking in warehouses causes severe musculoskeletal __________.</div>
+                    <select class="vocab-select" id="ex2-q3">
+                        <option value="">-- Choose Word --</option>
+                        <option value="strain">strain</option>
+                        <option value="transparency">transparency</option>
+                        <option value="restructuring">restructuring</option>
+                    </select>
+                    <div class="feedback-box" id="ex2-fb-3"></div>
+                </div>
+
+                <button class="btn btn-primary" onclick="gradeEx2()">Check Exercise 2 Answers</button>
+            </section>
+
+            <!-- EXERCISE 3 -->
+            <section id="ex3" class="module-card">
+                <div class="module-header">
+                    <div>
+                        <span class="module-tag">Exercise 03</span>
+                        <h2 class="module-title">Synonym Paraphrase Decoder (T/F/NG Core Skill)</h2>
+                    </div>
+                </div>
+                <p>Connect the formal passage phrasing on the left to its correct IELTS exam paraphrase on the right.</p>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">1. Formal Passage Phrase: <em>"installation costs remain prohibitive for small enterprises"</em></div>
+                    <select class="vocab-select" id="ex3-q1">
+                        <option value="">-- Select Exam Paraphrase --</option>
+                        <option value="too expensive for small businesses to implement">too expensive for small businesses to implement</option>
+                        <option value="banned by government regulators">banned by government regulators</option>
+                        <option value="free of charge for large corporations">free of charge for large corporations</option>
+                    </select>
+                    <div class="feedback-box" id="ex3-fb-1"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">2. Formal Passage Phrase: <em>"reduces transit delays by an average of 22% compared to conventional fixed-schedule dispatching"</em></div>
+                    <select class="vocab-select" id="ex3-q2">
+                        <option value="">-- Select Exam Paraphrase --</option>
+                        <option value="lowered shipping delays compared to traditional dispatch systems">lowered shipping delays compared to traditional dispatch systems</option>
+                        <option value="increased delivery times across European ports">increased delivery times across European ports</option>
+                        <option value="eliminated all traffic accidents completely">eliminated all traffic accidents completely</option>
+                    </select>
+                    <div class="feedback-box" id="ex3-fb-2"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">3. Formal Passage Phrase: <em>"human dispatchers consistently outperform machine models during severe operational disruptions"</em></div>
+                    <select class="vocab-select" id="ex3-q3">
+                        <option value="">-- Select Exam Paraphrase --</option>
+                        <option value="humans manage unexpected emergencies better than algorithms">humans manage unexpected emergencies better than algorithms</option>
+                        <option value="algorithms operate faster than humans in heavy storms">algorithms operate faster than humans in heavy storms</option>
+                    </select>
+                    <div class="feedback-box" id="ex3-fb-3"></div>
+                </div>
+
+                <button class="btn btn-primary" onclick="gradeEx3()">Check Exercise 3 Answers</button>
+            </section>
+
+            <!-- EXERCISE 4 -->
+            <section id="ex4" class="module-card">
+                <div class="module-header">
+                    <div>
+                        <span class="module-tag">Exercise 04</span>
+                        <h2 class="module-title">Academic Sentence Context Cloze Test</h2>
+                    </div>
+                </div>
+                <p>Fill in the blank with the appropriate word from the bank: <code>[integration, transparency, conventional, telemetry]</code></p>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">1. The seamless __________ of AI software into office routine has reshaped worker duties.</div>
+                    <input type="text" class="vocab-input" id="ex4-q1" placeholder="Type word here...">
+                    <div class="feedback-box" id="ex4-fb-1"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">2. Lack of algorithm __________ causes employees to lose trust in corporate management decisions.</div>
+                    <input type="text" class="vocab-input" id="ex4-q2" placeholder="Type word here...">
+                    <div class="feedback-box" id="ex4-fb-2"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">3. Automated dispatch reduces transit times compared to __________ paper-based methods.</div>
+                    <input type="text" class="vocab-input" id="ex4-q3" placeholder="Type word here...">
+                    <div class="feedback-box" id="ex4-fb-3"></div>
+                </div>
+
+                <button class="btn btn-primary" onclick="gradeEx4()">Check Exercise 4 Answers</button>
+            </section>
+
+            <!-- EXERCISE 5 -->
+            <section id="ex5" class="module-card">
+                <div class="module-header">
+                    <div>
+                        <span class="module-tag">Exercise 05</span>
+                        <h2 class="module-title">Quantifier Scope & Hedging Classifier</h2>
+                    </div>
+                </div>
+                <p>In IELTS True / False / Not Given, absolute scope words frequently signal FALSE statements when compared to hedged passage claims. Categorize each word:</p>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">1. Word: <strong>"invariably"</strong> (Passage: <em>"often"</em>)</div>
+                    <select class="vocab-select" id="ex5-q1">
+                        <option value="">-- Select Scope Category --</option>
+                        <option value="Absolute / Extreme Scope (High FALSE Risk)">Absolute / Extreme Scope (High FALSE Risk)</option>
+                        <option value="Hedged / Qualified Scope (Academic Standard)">Hedged / Qualified Scope (Academic Standard)</option>
+                    </select>
+                    <div class="feedback-box" id="ex5-fb-1"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">2. Word: <strong>"predominantly"</strong> (Passage: <em>"leads mainly to..."</em>)</div>
+                    <select class="vocab-select" id="ex5-q2">
+                        <option value="">-- Select Scope Category --</option>
+                        <option value="Absolute / Extreme Scope (High FALSE Risk)">Absolute / Extreme Scope (High FALSE Risk)</option>
+                        <option value="Hedged / Qualified Scope (Academic Standard)">Hedged / Qualified Scope (Academic Standard)</option>
+                    </select>
+                    <div class="feedback-box" id="ex5-fb-2"></div>
+                </div>
+
+                <div class="exercise-item">
+                    <div class="exercise-question">3. Word: <strong>"entirely"</strong> (Passage: <em>"exception-handling principle with human supervisors"</em>)</div>
+                    <select class="vocab-select" id="ex5-q3">
+                        <option value="">-- Select Scope Category --</option>
+                        <option value="Absolute / Extreme Scope (High FALSE Risk)">Absolute / Extreme Scope (High FALSE Risk)</option>
+                        <option value="Hedged / Qualified Scope (Academic Standard)">Hedged / Qualified Scope (Academic Standard)</option>
+                    </select>
+                    <div class="feedback-box" id="ex5-fb-3"></div>
+                </div>
+
+                <button class="btn btn-primary" onclick="gradeEx5()">Check Exercise 5 Answers</button>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- JavaScript Functionality -->
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        }
+
+        // Ex 1 Grading
+        function gradeEx1() {
+            const ans = {
+                1: 'Exception-handling principle',
+                2: 'Proprietary algorithm',
+                3: 'Task restructuring'
+            };
+            for (let i = 1; i <= 3; i++) {
+                const val = document.getElementById(`ex1-q${i}`).value;
+                const fb = document.getElementById(`ex1-fb-${i}`);
+                fb.style.display = 'block';
+                if (val === ans[i]) {
+                    fb.className = 'feedback-box callout-success';
+                    fb.innerHTML = `<strong>Correct!</strong> ${ans[i]} is the accurate term.`;
+                } else {
+                    fb.className = 'feedback-box callout-danger';
+                    fb.innerHTML = `<strong>Incorrect.</strong> Correct term is <em>${ans[i]}</em>.`;
+                }
+            }
+        }
+
+        // Ex 2 Grading
+        function gradeEx2() {
+            const ans = { 1: 'autonomy', 2: 'feedback', 3: 'strain' };
+            for (let i = 1; i <= 3; i++) {
+                const val = document.getElementById(`ex2-q${i}`).value;
+                const fb = document.getElementById(`ex2-fb-${i}`);
+                fb.style.display = 'block';
+                if (val === ans[i]) {
+                    fb.className = 'feedback-box callout-success';
+                    fb.innerHTML = `<strong>Correct!</strong> "...${ans[i]}" forms the standard academic collocation.`;
+                } else {
+                    fb.className = 'feedback-box callout-danger';
+                    fb.innerHTML = `<strong>Incorrect.</strong> Correct collocation is <em>${ans[i]}</em>.`;
+                }
+            }
+        }
+
+        // Ex 3 Grading
+        function gradeEx3() {
+            const ans = {
+                1: 'too expensive for small businesses to implement',
+                2: 'lowered shipping delays compared to traditional dispatch systems',
+                3: 'humans manage unexpected emergencies better than algorithms'
+            };
+            for (let i = 1; i <= 3; i++) {
+                const val = document.getElementById(`ex3-q${i}`).value;
+                const fb = document.getElementById(`ex3-fb-${i}`);
+                fb.style.display = 'block';
+                if (val === ans[i]) {
+                    fb.className = 'feedback-box callout-success';
+                    fb.innerHTML = '<strong>Correct!</strong> This is an accurate Band 6 academic paraphrase.';
+                } else {
+                    fb.className = 'feedback-box callout-danger';
+                    fb.innerHTML = `<strong>Incorrect.</strong> Exact paraphrase is: <em>"${ans[i]}"</em>`;
+                }
+            }
+        }
+
+        // Ex 4 Grading
+        function gradeEx4() {
+            const ans = { 1: 'integration', 2: 'transparency', 3: 'conventional' };
+            for (let i = 1; i <= 3; i++) {
+                const val = document.getElementById(`ex4-q${i}`).value.trim().toLowerCase();
+                const fb = document.getElementById(`ex4-fb-${i}`);
+                fb.style.display = 'block';
+                if (val === ans[i]) {
+                    fb.className = 'feedback-box callout-success';
+                    fb.innerHTML = `<strong>Correct!</strong> "${ans[i]}" fits the academic sentence context.`;
+                } else {
+                    fb.className = 'feedback-box callout-danger';
+                    fb.innerHTML = `<strong>Incorrect.</strong> Expected word is <em>${ans[i]}</em>.`;
+                }
+            }
+        }
+
+        // Ex 5 Grading
+        function gradeEx5() {
+            const ans = {
+                1: 'Absolute / Extreme Scope (High FALSE Risk)',
+                2: 'Hedged / Qualified Scope (Academic Standard)',
+                3: 'Absolute / Extreme Scope (High FALSE Risk)'
+            };
+            for (let i = 1; i <= 3; i++) {
+                const val = document.getElementById(`ex5-q${i}`).value;
+                const fb = document.getElementById(`ex5-fb-${i}`);
+                fb.style.display = 'block';
+                if (val === ans[i]) {
+                    fb.className = 'feedback-box callout-success';
+                    fb.innerHTML = `<strong>Correct!</strong> Categorized as <em>${ans[i]}</em>.`;
+                } else {
+                    fb.className = 'feedback-box callout-danger';
+                    fb.innerHTML = `<strong>Incorrect.</strong> Correct category is <em>${ans[i]}</em>.`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
